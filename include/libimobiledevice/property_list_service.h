@@ -97,6 +97,7 @@ LIBIMOBILEDEVICE_API_MSC property_list_service_error_t property_list_service_sen
  *      or PROPERTY_LIST_SERVICE_E_UNKNOWN_ERROR when an unspecified error occurs.
  */
 LIBIMOBILEDEVICE_API_MSC property_list_service_error_t property_list_service_send_binary_plist(property_list_service_client_t client, plist_t plist);
+LIBIMOBILEDEVICE_API_MSC property_list_service_error_t property_list_service_send_binary_plist_with_host2big(property_list_service_client_t client, plist_t plist, int host2big);
 
 /**
  * Receives a plist using the given property list service client with specified
@@ -139,7 +140,7 @@ LIBIMOBILEDEVICE_API_MSC property_list_service_error_t property_list_service_rec
  *      an unspecified error occurs.
  */
 LIBIMOBILEDEVICE_API_MSC property_list_service_error_t property_list_service_receive_plist(property_list_service_client_t client, plist_t *plist);
-
+LIBIMOBILEDEVICE_API_MSC property_list_service_error_t property_list_service_receive_plist_with_big2host(property_list_service_client_t client, plist_t* plist, int isBigToHost);
 /**
  * Enable SSL for the given property list service client.
  *
